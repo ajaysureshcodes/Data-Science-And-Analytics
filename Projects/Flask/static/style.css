@@ -33,6 +33,7 @@ input[type="number"] {
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
+  margin-bottom: 10px; /* Added margin-bottom */
 }
 
 button[type="submit"] {
@@ -42,6 +43,7 @@ button[type="submit"] {
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  margin-top: 10px; /* Added margin-top */
 }
 
 button[type="submit"]:hover {
@@ -54,4 +56,8 @@ h2 {
 
 h3 {
   font-weight: bold;
+}
+
+.link {
+  margin-top: 20px; /* Added margin-top */
 }

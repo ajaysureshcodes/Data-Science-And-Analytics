@@ -18,8 +18,12 @@
 
       <button type="submit">Predict</button>
     </form>
+
+    {% if result %}
     <h2>Prediction Result:</h2>
     <h3>{{ result }}</h3>
+    <a href="/">Try another Prediction</a>
+    {% endif %}
   </div>
 </body>
 </html>

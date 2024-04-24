@@ -2,7 +2,7 @@ from flask import Flask, render_template, request
 import pickle
 from sklearn.preprocessing import StandardScaler
 sc = StandardScaler()
-model = pickle.load(open("purchase_model.pkl", "rb"))
+model = pickle.load(open("KNN.pkl", "rb"))
 scaler = pickle.load(open('scaler.pkl', 'rb'))
 
 app = Flask(__name__)
