@@ -1,25 +1,24 @@
 body {
-  font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-image: url("../static/background.jpg"); /* Replace with your image path */
-  background-size: cover;
-  background-position: center;
-  height: 100vh; /* Ensures background fills viewport height */
-  display: flex; /* Center content vertically */
-  justify-content: center;
-  align-items: center;
+  font-family: sans-serif;
+  background-image: url("../static/background.jpg");
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat;
 }
 
 .container {
-  background-color: rgba(255, 255, 255, 0.8); /* White background with some transparency */
-  border-radius: 10px; /* Rounded corners */
+  width: 500px;
+  margin: 50px auto;
   padding: 30px;
-  text-align: center;
+  background-color: rgba(255, 255, 255, 0.8); 
+  border-radius: 10px; 
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); 
 }
 
 h1 {
-  font-size: 2em;
+  text-align: center;
   margin-bottom: 20px;
 }
 
@@ -29,35 +28,43 @@ label {
 }
 
 input[type="number"] {
-  width: 200px;
+  width: 100%;
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
-  margin-bottom: 10px; /* Added margin-bottom */
 }
 
 button[type="submit"] {
-  background-color: #4CAF50; /* Green color */
+  background-color: #4CAF50; 
   color: white;
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  margin-top: 10px; /* Added margin-top */
 }
 
 button[type="submit"]:hover {
-  background-color: #45A049; /* Darker green on hover */
+  background-color: #45A049; 
 }
 
 h2 {
+  text-align: center;
   margin-top: 30px;
 }
 
 h3 {
   font-weight: bold;
+  text-align: center;
 }
 
-.link {
-  margin-top: 20px; /* Added margin-top */
+a {
+  display: block;
+  text-align: center;
+  margin-top: 10px;
+  color: #4CAF50; 
+  text-decoration: none; 
+}
+
+a:hover {
+  color: #45A049; 
 }

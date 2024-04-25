@@ -1,7 +1,5 @@
 from flask import Flask, render_template, request
 import pickle
-from sklearn.preprocessing import StandardScaler
-sc = StandardScaler()
 model = pickle.load(open("Random.pkl", "rb"))
 app = Flask(__name__)
 
