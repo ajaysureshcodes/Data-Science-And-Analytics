@@ -2,9 +2,7 @@ from flask import Flask, render_template, request
 import pickle
 from sklearn.preprocessing import StandardScaler
 sc = StandardScaler()
-model = pickle.load(open("KNN.pkl", "rb"))
-scaler = pickle.load(open('scaler.pkl', 'rb'))
-
+model = pickle.load(open("Random.pkl", "rb"))
 app = Flask(__name__)
 
 @app.route("/")
@@ -16,9 +14,8 @@ def predict():
     age = int(request.form["age"])
     salary = float(request.form["salary"])
     data = [[age, salary]]
-    sc_data = scaler.transform(data)
-    print(sc_data)
-    prediction = model.predict(sc_data)[0]
+    print(data)
+    prediction = model.predict(data)[0]
     if prediction == 1:
         outcome = "Likely to purchase the product"  
     else:
