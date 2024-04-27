@@ -9,12 +9,14 @@
 <body>
   <div class="container">
     <h1>Purchase Prediction</h1>
-    <form action="/predict" method="post">
+    <form action="/predict" method="post" onsubmit="return validateForm()">
       <label for="age">Age:</label>
-      <input type="number" id="age" name="age" required><br><br>
+      <input type="number" id="age" name="age" required><br>
+      <span id="ageError" style="color: red;"></span><br>
 
       <label for="salary">Estimated Salary:</label>
-      <input type="number" id="salary" name="salary" required><br><br>
+      <input type="number" id="salary" name="salary" required><br>
+      <span id="salaryError" style="color: red;"></span><br>
 
       <button type="submit">Predict</button>
     </form>
@@ -25,5 +27,30 @@
     <a href="/">Try another Prediction</a>
     {% endif %}
   </div>
+
+  <script>
+    function validateForm() {
+      var age = document.getElementById("age").value;
+      var salary = document.getElementById("salary").value;
+      var ageError = document.getElementById("ageError");
+      var salaryError = document.getElementById("salaryError");
+
+      if (age < 18) {
+        ageError.innerHTML = "Minimum age is 18";
+        return false;
+      } else {
+        ageError.innerHTML = "";
+      }
+
+      if (salary < 15000) {
+        salaryError.innerHTML = "Minimum salary required is 15000";
+        return false;
+      } else {
+        salaryError.innerHTML = "";
+      }
+
+      return true;
+    }
+  </script>
 </body>
 </html>
